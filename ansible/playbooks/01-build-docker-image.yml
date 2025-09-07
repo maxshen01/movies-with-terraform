@@ -13,3 +13,10 @@
     community.docker.docker_image:
       name: maxshen01/movies-db:latest
       source: pull
+  - name: Copy docker-compose.yml 
+    copy:
+      src: ../../docker-compose.yml
+      dest: /opt/myapp/docker-compose.yml
+  - name: Start containers
+    community.docker.docker_compose:
+      project_src: /opt/myapp
