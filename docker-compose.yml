@@ -1,0 +1,28 @@
+# docker compose creates containers in one file, that can be connected
+# if necessary. It does not build docker images. 
+
+version: '3.9'  #specify version of docker
+services: # defines how many containers are needed. 
+  movies-mvc: # name of container
+    image: maxshen01/movies-mvc:latest # name of image 
+    ports:
+      - "3000:3000"  # specify the ports it will be running on.
+    restart: always
+    depends_on:  # specify what container this container depends on. 
+      - movies-db
+    networks:    # specify the network to run on. 
+      - movies-network
+  
+  movies-db:
+    image: maxshen01/movies-db:latest
+    ports:
+      - "5432:5432"
+    restart: always
+    networks:
+      - movies-network
+
+# creates a private network for containers to talk to eachother. 
+# This allows movies-mvc and movies-db to communicate without needing to 
+# access the localhost//:5432. 
+networks: 
+  movies-network:

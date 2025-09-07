@@ -1,0 +1,133 @@
+nav {
+    width: 100%;
+}
+
+nav div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main {
+    background-color: gray;
+    border: 2px solid black;
+    text-align: center;
+    margin: 0 6%;
+    border-radius: 3%;
+}
+
+.actorName {
+    text-align: center  ;
+}
+
+main header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 22px;
+    border-bottom: 2px solid black;
+    margin-bottom: 2%;
+}
+
+.a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.a:not(:last-child) {
+    border-right: 2px solid black;
+}
+
+.a:hover {
+    background-color: lightgray;
+}
+
+.actorImage {
+    text-align: center;
+}
+
+.actorImage img {
+    border: 2px solid black
+}
+
+main p {
+    text-align: left;
+    padding: 0 3%;
+}
+
+main section {
+    padding-bottom: 20px;
+}
+
+
+/* below Yahya's css code */
+*{
+    box-sizing: border-box;
+    /* border: 0.1px solid green; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-nav{
+    display:flex;
+    flex-direction: row;
+    margin: 10px;
+}
+.section-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+.poster-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.material-icons {
+  font-size: 32px;
+}
+.logo{
+    display: flex;
+}
+=======
+footer {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: gray;
+    border-top: 2px solid black;
+}
+
+footer a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+
+footer a:not(:last-child) {
+    border-right: 2px solid black;
+}
+
+footer a:hover {
+    background-color: lightgray;
+}
