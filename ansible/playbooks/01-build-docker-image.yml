@@ -1,4 +1,4 @@
-- hosts: production
+- hosts: testing
   become: true
   tasks:
   - yum:
@@ -16,7 +16,8 @@
   - name: Copy docker-compose.yml 
     copy:
       src: ../../docker-compose.yml
-      dest: /opt/myapp/docker-compose.yml
+      dest: /root/docker-compose.yml
   - name: Start containers
     community.docker.docker_compose:
-      project_src: /opt/myapp
+      project_src: /root
+      state: present
